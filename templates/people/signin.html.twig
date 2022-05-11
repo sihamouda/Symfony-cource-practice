@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PeopleController!{% endblock %}
+
+{% block body %}
+    {% for flash in app.flashes('success')%}
+        <div class="alert alert-success">
+            {{flash}}
+        </div>
+    {%endfor%}
+    {% for flash in app.flashes('failed')%}
+        <div class="alert alert-danger">
+            {{flash}}
+        </div>
+    {%endfor%}
+<div class="container">
+    <h1>Signin</h1>
+    {{form(form)}}
+</div>
+{% endblock %}
