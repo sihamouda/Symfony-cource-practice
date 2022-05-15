@@ -34,7 +34,7 @@ class PeopleController extends AbstractController
                 return $this->redirectToRoute('home');
             }
             else{
-                $this->addFlash('failed','asba');
+                $this->addFlash('failed','oups');
             }
         }
         return $this->render('people/login.html.twig', [
@@ -60,7 +60,7 @@ class PeopleController extends AbstractController
                 $this->addFlash('success','mabrouk');
             }
             else{
-                $this->addFlash('failed','asba');
+                $this->addFlash('failed','oups');
             }
         }
 
